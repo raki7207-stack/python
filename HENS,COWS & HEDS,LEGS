@@ -1,0 +1,11 @@
+heads=int(input("enter any number:"))
+legs=int(input("enter any number:"))
+flags=False
+for cows in range(heads+1):
+    hens=heads-cows
+    if(cows*4 + hens*2==legs):
+        print(cows)
+        print(hens)
+        Flags=True
+if flags==False:
+        print("No solution")
