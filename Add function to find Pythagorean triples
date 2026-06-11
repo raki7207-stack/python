@@ -1,0 +1,20 @@
+def gs(a, b):
+    while b != 0:
+        rem = a % b
+        a = b
+        b = rem
+    return a
+
+def cop(a, b):
+    return gs(a, b) == 1
+
+n = int(input("Enter the limit: "))
+
+for a in range(5, n + 1):
+    for b in range(4, a):
+        for c in range(3, b):
+            if (c * c + b * b == a * a and
+                cop(a, b) and
+                cop(a, c) and
+                cop(b, c)):
+                print(c, b, a)
