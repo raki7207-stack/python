@@ -1,0 +1,29 @@
+class node:
+    def __init__ (self,data):
+        self.data=data
+        self.next=None
+class LinkedList:
+    def __init__ (self):
+        self.head=None
+    def insert(self,data):
+        nn=node(data)
+        if self.head==None:
+            self.head=nn
+        else:
+            temp=self.head
+            while(temp.next!=None):
+                temp=temp.next
+            temp.next=nn
+    def display(self):
+        temp=self.head
+        while(temp!=None):
+            print(temp.data,end=">>")
+            temp=temp.next
+
+
+x=LinkedList()
+x.insert(36)
+x.insert(56)
+x.insert(87)
+x.insert(87)
+x.display()
